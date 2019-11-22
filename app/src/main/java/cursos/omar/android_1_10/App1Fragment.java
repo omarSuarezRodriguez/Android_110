@@ -32,17 +32,22 @@ public class App1Fragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
 
 
-        //Referenciamos los componentes mediante sus ID
-        et_1 = (EditText) getView().findViewById(R.id.et_1);    //Ponemos getView() cuando es fragment
-        et_2 = (EditText) getView().findViewById(R.id.et_2);
-        tv_1 = (TextView) getView().findViewById(R.id.tv_1);
-        btn_1 = (Button) getView().findViewById(R.id.btn_1);
-        btn_1.setOnClickListener(this); //El boton escuchará cuando se haga click en este
-
-
         // Inflate the layout for this fragment
         //Para inflar el layout de este fragment
-        return inflater.inflate(R.layout.fragment_app_1, container, false);
+
+        //Separamos la vista
+        View view = inflater.inflate(R.layout.fragment_app_1, container, false);
+
+
+        //Referenciamos los componentes mediante su ID
+        et_1 = (EditText) view.findViewById(R.id.et_1); //Primero va la vista view. luego buscamos id
+        et_2 = (EditText) view.findViewById(R.id.et_2);
+        tv_1 = (TextView) view.findViewById(R.id.tv_1);
+        btn_1 = (Button) view.findViewById(R.id.btn_1);
+        btn_1.setOnClickListener(this); //El boton escuchará cuando se haga click en este
+
+        //Retornamos la vista
+        return view;
 
 
     }
