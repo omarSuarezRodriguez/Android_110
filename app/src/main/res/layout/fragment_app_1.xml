@@ -28,6 +28,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/et_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Primer Número" />
@@ -41,6 +42,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/et_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Segundo Número" />
@@ -50,11 +52,13 @@
 
     <!--Botón Acción-->
     <Button
+        android:id="@+id/btn_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sumar" />
 
     <TextView
+        android:id="@+id/tv_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Resultado:"
