@@ -93,10 +93,10 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.contenedor, new SlideshowFragment()).commit();
         } else if (id == R.id.nav_tools) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new ToolsFragment()).commit();
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.nav_app_1) {
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new App1Fragment()).commit();
+        } else if (id == R.id.nav_app_2) {
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new App2Fragment()).commit();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
