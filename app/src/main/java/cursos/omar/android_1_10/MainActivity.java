@@ -3,6 +3,7 @@ package cursos.omar.android_1_10;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -38,6 +39,10 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new ImportFragment()).commit();
+
     }
 
     @Override
@@ -78,14 +83,16 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-            // Handle the camera action
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        if (id == R.id.nav_import) {
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new ImportFragment()).commit();
         } else if (id == R.id.nav_gallery) {
-
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new GalleryFragment()).commit();
         } else if (id == R.id.nav_slideshow) {
-
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new SlideshowFragment()).commit();
         } else if (id == R.id.nav_tools) {
-
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new ToolsFragment()).commit();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
