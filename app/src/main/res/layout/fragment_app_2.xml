@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ImportFragment">
+
+
+    <!--Mostrar el precio del IVA de un producto con un valor de 100-->
+    <!--y su precio final-->
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="App 2"
         android:textSize="42sp"
         android:textStyle="bold" />
 
-</FrameLayout>
+
+    <!--Primer Edit Text-->
+    <!--Precio Producto-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio Producto" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+</android.support.v7.widget.LinearLayoutCompat>
