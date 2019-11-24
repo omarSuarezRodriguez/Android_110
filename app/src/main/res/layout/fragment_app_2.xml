@@ -3,12 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="15dp"
     tools:context=".ImportFragment">
 
 
-    <!--Mostrar el precio del IVA de un producto con un valor de 100-->
-    <!--y su precio final-->
+    <!--Leer el precio de un producto, del iva, y calcular su precio-->
+
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -20,13 +25,14 @@
         android:textStyle="bold" />
 
 
-    <!--Primer Edit Text-->
+    <!--Primer EditText-->
     <!--Precio Producto-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/et_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Precio Producto" />
@@ -34,7 +40,47 @@
     </android.support.design.widget.TextInputLayout>
 
 
+    <!--Segundo EditText-->
+    <!--% de Iva del Producto-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <EditText
+            android:id="@+id/et_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="% de Iva" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <!--Botón para calcular el iva-->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular" />
+
+
+    <!--TextView del precio del producto con iva-->
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Precio Producto con Iva: "
+        android:textSize="18sp" />
+
+
+    <!--Precio del iva del producto calculado-->
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Precio Iva del Producto: "
+        android:textSize="18sp" />
 
 
 </android.support.v7.widget.LinearLayoutCompat>
