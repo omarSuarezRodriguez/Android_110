@@ -26,12 +26,18 @@
         <menu>
             <item
                 android:id="@+id/nav_app_1"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_send"
                 android:title="App 1" />
             <item
                 android:id="@+id/nav_app_2"
                 android:icon="@drawable/ic_menu_send"
                 android:title="App 2" />
+            <item
+                android:id="@+id/nav_app_3"
+                android:icon="@drawable/ic_menu_send"
+                android:title="App 3" />
+
+
         </menu>
     </item>
 
