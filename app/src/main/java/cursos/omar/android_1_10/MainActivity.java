@@ -99,6 +99,8 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.contenedor, new App2Fragment()).commit();
         } else if (id == R.id.nav_app_3) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new App3Fragment()).commit();
+        } else if (id == R.id.nav_app_4) {
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new App4Fragment()).commit();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

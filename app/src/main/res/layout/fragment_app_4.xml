@@ -12,7 +12,8 @@
     tools:context=".ImportFragment">
 
 
-    <!--De dos números saber cual es el mayor-->
+    <!--Ingresar un número e indicar si está entre 0 y 10-->
+    <!--También si está en tre 11 y 20, también 21 y 30-->
 
 
     <!-- TODO: Update blank fragment layout -->
@@ -25,6 +26,37 @@
         android:textStyle="bold" />
 
 
+    <!--EditText del número a ingresar-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <!--Botón para calcular-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"/>
+
+
+    <!--TextView del resultado-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado: "
+        android:gravity="center_horizontal"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""/>
 
 </android.support.v7.widget.LinearLayoutCompat>
