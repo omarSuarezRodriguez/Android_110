@@ -1,5 +1,6 @@
 package cursos.omar.android_1_10;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -24,7 +25,6 @@ public class App3Fragment extends Fragment implements View.OnClickListener {
     TextView tv_1;
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,7 +37,6 @@ public class App3Fragment extends Fragment implements View.OnClickListener {
 
         //Separamos la vista
         View view = inflater.inflate(R.layout.fragment_app_3, container, false);
-
 
 
         //Referenciamos los componentes mediante su ID
@@ -59,6 +58,34 @@ public class App3Fragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
 
 
+        //Obtenemos los valores del teléfono
 
+        int num_1 = Integer.parseInt(et_1.getText().toString());
+        int num_2 = Integer.parseInt(et_2.getText().toString());
+
+        if (num_1 > num_2) {
+            showMessage("Número mayor:", "El número mayor es: " + num_1);
+            tv_1.setText("Número mayor: " + num_1);
+        } else {
+            showMessage("Número mayor:", "El número mayor es: " + num_2);
+            tv_1.setText("Número mayor: " + num_2);
+        }
+
+
+//        showMessage("Prueba", "Esto es una prueba");
+
+
+    }
+
+
+    //Mostrar un mensaje con alertdialog
+    //Es como una tarjeta blanca de alert
+    private void showMessage(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.create();
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
     }
 }
