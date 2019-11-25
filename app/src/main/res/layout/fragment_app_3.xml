@@ -12,7 +12,7 @@
     tools:context=".ImportFragment">
 
 
-    <!--Leer el precio de un producto, del iva, y calcular su precio-->
+    <!--De dos números saber cual es el mayor-->
 
 
     <!-- TODO: Update blank fragment layout -->
@@ -24,19 +24,49 @@
         android:textSize="42sp"
         android:textStyle="bold" />
 
+
+    <!--EditText del primer número-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/et_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Primer Número"/>
-
+            android:hint="Primer Número" />
 
     </android.support.design.widget.TextInputLayout>
 
 
+    <!--EditText del segundo número-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Segundo Número" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <!--Botón de acción para calcular-->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular" />
+
+
+    <!--Text>View del resultado-->
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado:"
+        android:textSize="18sp" />
 
 
 </android.support.v7.widget.LinearLayoutCompat>

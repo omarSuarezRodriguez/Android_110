@@ -1,5 +1,6 @@
 package cursos.omar.android_1_10;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -67,7 +68,23 @@ public class App1Fragment extends Fragment implements View.OnClickListener {
         //Mostramos el resultado en el TextView
         tv_1.setText("Resultado: " + resultado);
 
+        showMessage("Resultado", "El Resultado es: " + resultado);
 
+
+    }
+
+
+
+
+    //Mostrar un mensaje con alertdialog
+    //Es como una tarjeta blanca de alert
+    private void showMessage(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.create();
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
     }
 
 
